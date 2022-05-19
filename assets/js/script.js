@@ -116,15 +116,15 @@ var genSpecial = function() {
 
 // Add event listener to generate button (MAKES THE BUTTON ON THE HTML PAGE DO SOMETHING)
 generateBtn.addEventListener("click", writePassword);
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+// © 2022 GitHub, Inc.
+// Terms
+// Privacy
+// Security
+// Status
+// Docs
+// Contact GitHub
+// Pricing
+// API
+// Training
+// Blog
+// About
