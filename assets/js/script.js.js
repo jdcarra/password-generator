@@ -1,7 +1,7 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-//initialize the object I use to store the password criteria as selected by the user.
+//initialize the object I use to store the password criteria as selected by the user. Tutor help 
 var passwordCriteria = {
   size: 0,
   lowercase: 0,
@@ -18,7 +18,7 @@ function writePassword() {
   //calls the function that actually generates the password
   var password = generatePassword();
 
-  //pass the newly generated password back to the text box in the html
+  //pass the newly generated password back to the text box in the html5 loops back
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
@@ -30,7 +30,7 @@ var generatePassword = function() {
   for (i = 0; i < passwordCriteria.size; i++){
     var charType = randomNumber(1, 4);
 
-    //compare tye new charType and if it is a type of character the user wants, generate a random character from that character set.
+   
     if (charType === 1 && passwordCriteria.lowercase === 1) {
       newPassword += genLowercase();
       console.log(newPassword);
@@ -47,7 +47,7 @@ var generatePassword = function() {
       newPassword += genSpecial();
       console.log(newPassword);
     }
-    //if all else fails, decrement i to throw out this iteration through the loop and try again.
+    //if all else fails, decrement (i) to throw out this iteration through the loop and try again.
     else i--;
     
   }
@@ -63,7 +63,7 @@ var randomNumber = function(min, max) {
 
 //this function presents the user with a series of prompts to determine what criteria the password 
 //should include. The criteria are stored in a global object to make it easier for all parts of the 
-//program to access the criteria.
+//program to access the criteria. tutor help to explain and understand
 var criteriaPrompts = function() {
   
   while (passwordCriteria.size < 8 || passwordCriteria.size > 128) {
@@ -97,10 +97,7 @@ var criteriaPrompts = function() {
   }
 }
 
-//these functions generate a single character from the appropriate character set and return it.
-//NOTE: I did not incldue all possible special characters to simplify the code for the challenge.
-//The character sets are based on the ASCII table, I am assuming only standard english characters
-//also no emoji's or anything else in Unicode.
+
 var genLowercase = function() {
   return String.fromCharCode(97 + randomNumber(0, 25));
 }
@@ -119,3 +116,15 @@ var genSpecial = function() {
 
 // Add event listener to generate button (MAKES THE BUTTON ON THE HTML PAGE DO SOMETHING)
 generateBtn.addEventListener("click", writePassword);
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
